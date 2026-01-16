@@ -332,26 +332,6 @@ A **department-scoped project management system** that enables:
    - **Recommendation:** Implement resumable uploads
 
 4. **Circular Task Dependencies**
-   - **Issue:** No validation prevents A → B → A
-   - **Risk:** Infinite loops in dependency resolution
-   - **Recommendation:** Add cycle detection
-
-5. **Orphaned Subtasks**
-   - **Issue:** If parent task deleted, subtasks may become orphaned
-   - **Risk:** Data inconsistency
-   - **Status:** Soft delete cascades, but verify hard delete behavior
-
-6. **Token Expiration on Public Shares**
-   - **Issue:** Expired tokens show generic error
-   - **Risk:** Poor UX
-   - **Recommendation:** Clear error message for expired tokens
-
-7. **Email Queue Failures**
-   - **Issue:** Failed jobs logged but no retry strategy verified
-   - **Risk:** Notifications not delivered
-   - **Recommendation:** Verify retry logic (3 attempts with backoff)
-
-8. **Database Connection Pool Exhaustion**
    - **Issue:** No connection pooling configuration
    - **Risk:** High concurrency causes connection errors
    - **Recommendation:** Configure connection pool limits
