@@ -1392,23 +1392,6 @@ class TaskTest extends TestCase
    - Create share → User receives notification → User can access project
 
 3. **Real-Time Sync Flow:**
-   - User A creates task → User B sees update via WebSocket
-
-#### **D. End-to-End Tests (Frontend)**
-
-**Tools:** Cypress or Playwright
-
-**Critical Flows:**
-
-1. **User Journey:**
-   ```javascript
-   // cypress/e2e/user-journey.cy.js
-   - Login → Create Project → Create Task → Assign User → Verify Notification
-   ```
-
-2. **Real-Time Updates:**
-   ```javascript
-   // cypress/e2e/realtime.cy.js
    - Open two browsers → Create task in one → Verify update in other
    ```
 
